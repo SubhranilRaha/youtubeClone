@@ -89,10 +89,10 @@ export const trend = async (req, res, next) => {
 export const sub = async (req, res, next) => {
   try {
     const user = await User.findById(req.user.id);
-    const subscribedChannels = user.subscribedUsers;
+    const subChannels = user.subUsers;
 
     const list = await Promise.all(
-      subscribedChannels.map(async (channelId) => {
+      subChannels.map(async (channelId) => {
         return await Video.find({ userId: channelId });
       })
     );
