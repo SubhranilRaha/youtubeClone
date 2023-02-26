@@ -18,11 +18,11 @@ const UserSchema = new mongoose.Schema(
     img: {
       type: String,
     },
-    subs: {
+    subscribers: {
       type: Number,
       default: 0,
     },
-    subUsers: {
+    subscribedUsers: {
       type: [String],
     },
     fromGoogle: {
